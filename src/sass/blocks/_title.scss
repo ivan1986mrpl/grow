@@ -1,0 +1,14 @@
+.title {
+	font-size: 100px;
+	color: #fff;
+	@media (max-width: 768px) {
+		font-size: 30px;
+	}
+}
+
+@media (max-width: 1200px) {}
+@media (max-width: 1200px) {}
+@media (max-width: 1200px) {}
+@media (min-width: var(--md2)) {}
+@media (max-width: var(--md2)) {}
+@media (any-hover: hover) {}

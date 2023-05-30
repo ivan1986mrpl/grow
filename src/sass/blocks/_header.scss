@@ -1,0 +1,115 @@
+.header {/* 42-1.25 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    background-color: rgba(30, 30, 30, 0.5);
+    &__container {
+    }
+
+    &__body {
+        padding: 5px 0px 5px 0px;/* отступы безопасности */
+        min-height: 116px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        column-gap: 35px;
+    }
+    &__logo{
+    }
+
+    &__cart,
+    &__button,
+    &__logo {
+        position: relative;
+        z-index: 5;
+    }
+
+    &__menu {
+        flex: 1 1 auto;/* позволяем увеличиваться */
+    }
+
+    &__cart {
+    }
+
+    &__buttons {
+    }
+
+    &__button {
+        flex: 0 0 auto;/* не позволяем уменьшаться */
+    }
+}
+.cart-header {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--text-color);
+    &__text {        
+        font-size: 18px;
+        line-height: 1.55;
+        transition: all 0.3s ease 0s;
+        &:hover {
+			@media (any-hover: hover) {
+				text-decoration: underline;
+				color: #FFFFFF;
+			}			
+		}
+    }
+
+    &__quantuty {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        width: 30px;
+        background: rgba(129, 129, 139, 0.3);
+        border-radius: 29.9375px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1;
+    }
+}
+@media (max-width: 991.98px) {
+    .header {
+        &__body {
+            column-gap: 25px;
+            min-height: 90px;
+        }
+        &__button {
+            padding: 16px 20px;
+        }
+    }
+}
+@media (max-width: 767.98px) {
+    .header {
+        &__body {
+            column-gap: 15px;
+            min-height: 70px;
+        }
+        &__button {
+            padding: 16px 15px;
+        }
+    }
+}
+@media (max-width: 560px) {
+    .header {
+        &__logo {
+            width: 32px;
+            flex: 0 0 32px;
+            overflow: hidden;
+        }
+    }
+    .cart-header {
+        &__text {
+            display: none;
+        }
+        &__quantuty {
+            width: 30px;
+            height: 45px;
+            padding-top: 3px;
+            border-radius: 0;
+            background: url("../img/header/cart.svg") center / 30px  no-repeat;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.buttons {    
+}
+.button {
+    display: inline-block;
+    text-align: center;
+    min-height: 52px;
+    padding: 16px 30px;
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 160%;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+    &_blue {
+        background-color: #3D96F4;
+    }
+    &_grey {
+        background-color: rgba(129, 129, 139, 0.2);
+    }
+    &:hover {
+        @media (any-hover: hover) {
+            transform: scale(1.04);
+            text-decoration: underline;
+        }
+    }
+}

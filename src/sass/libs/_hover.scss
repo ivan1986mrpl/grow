@@ -1,0 +1,132 @@
+/* как в портфолио фото */
+.em {
+    transition: all 0.6s;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &:hover {
+        transform: scale(1.02); /* увеличиваeт картинку */
+        filter: grayscale(90%);
+    }
+}/* как в портфолио фото */
+/* &:hover {
+    @media (any-hover: hover) {
+        text-decoration: underline;
+        color: #FFFFFF;
+    }
+} */
+/* https://min-max-calculator.9elements.com/ */
+/* Сервис создания favicon - https://www.favicon.by/ */
+/* Онлайн декодер WebP - https://squoosh.app/ */
+/* css responsive = плагин для калькулятора в css  */
+
+/* &__image {
+    display: block; чтобы появилась картинка 
+    position: relative;
+    padding-bottom: 49.238579%;  194высота картинки/394ширина картинки 
+}
+&__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+        &:hover {
+            transform: scale(1.10);
+            filter: grayscale(90%);
+        }
+    }
+} */
+
+/* 
+.ibg{
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+position: relative;
+}
+.ibg img{
+width: 0;
+height: 0;
+position: absolute;
+top: 0;
+left: 0;
+opacity: 0;
+visibility: hidden;
+}
+*/
+
+/*     &__video {
+        flex: 0 0 57%; 600px/1046px 
+        position: relative;
+        padding: 0px 0px 42.25% 0px;  442/1046*100=42.25% 
+    }
+    &__video iframe {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    } */
+
+    /* @media (any-hover: hover) {медиазапрос для устройств, где есть мышь
+    &:hover {
+        transform: scale(1.10);
+    }
+} */
+/* для адаптации картинок и  видео задаем родителю нижний процентный паддинг вместо фиксированной высоты */
+/* для этого высоту делим на ширину */
+/* &__video {
+    padding: 0px 0px 56.25% 0px;
+} */
+/* width="560" height="315" изображение или видео адаптируется */
+/* 315/560=56.25 из iframe */
+
+/* &__body > *:not(:last-child) {обращение ко всем обьектам первого уровня, кроме последнего
+    margin: 0px 0px 30px 0px;
+} */
+
+.ibg img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    //object-position: center;
+}
+/* одновременно указать в секции */
+/* .main-block {
+    position: relative;
+    &__image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+} */
+
+/* .container {
+    max-width: 1310px;
+    margin: 0 auto;
+    padding: 0px 15px;
+    box-sizing: border-box;
+} */
+[class*="__container"] {/* селектор атрибута */
+    max-width: 1310px;
+    margin: 0 auto;
+    padding: 0px 15px;
+    box-sizing: border-box;
+}
+.ibg {         
+    position: relative;
+    /* padding: 0px 0px 58% 0px; *//* отзывчивая высота нижним процентным паддингом родителю. задаем вместо фиксированной высоты.  */
+    //overflow: hidden;    
+}

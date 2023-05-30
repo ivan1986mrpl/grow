@@ -1,0 +1,117 @@
+.marketing {/* 2.47-2.58 */
+    padding-top: 100px;
+    padding-bottom: 100px;
+    &__container {
+        display: flex;
+        column-gap: 64px;
+        row-gap: 32px;
+    }
+
+    &__images {
+        flex: 0 1 50%;
+        align-self: flex-end;
+    }
+
+    &__content { 
+        flex: 0 1 50%;
+        align-self: center;
+    }
+
+    &__header {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__label {
+    }
+
+    &__title {
+        max-width: 520px;
+    }
+
+    &__text {
+        max-width: 450px;
+    }
+
+    &__list {
+    }
+
+    &__item {
+        position: relative;
+        padding-left: 42px;
+        padding-top: 4px;
+        min-height: 32px;
+        line-height: 1.5;
+        color: #9C9C9C;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: rgba(129, 129, 139, 0.1) url('../img/marketing/5.svg') center no-repeat;
+        } 
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+}
+.images-marketing {
+    display: flex;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: -34px;
+        width: 122px;
+        height: 122px;
+        background: url('../img/marketing/3.svg') center / cover no-repeat;
+    }
+    &__item {
+
+        &_big {
+            border-radius: 90% 0 49% 49% / 50% 0 31% 31%;
+            overflow: hidden;
+        }
+
+        &_small {
+            align-self: flex-end;
+            border-radius: 50% 50% 50% 0;
+            overflow: hidden;
+        }
+    }
+
+    &__img {
+        max-width: 100%;
+        transform: scale(1.08);
+    }
+}
+@media (max-width: 991.98px) {
+    .marketing {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+@media (max-width: 767.98px) {
+    .marketing {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        &__container {
+            flex-direction: column-reverse;
+        }
+        &__title,
+        &__text {
+            max-width: none;
+        }
+        &__images {
+            justify-content: center;
+        }
+    }
+}

@@ -1,0 +1,247 @@
+@import 'blocks/font';
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+ *///@import 'blocks/iconfont';
+/* @import 'libs/bootstrap-reboot.min'; */
+@import 'libs/normalize';/* обнуляющие стили */
+@import 'base/variables';
+@import 'base/mixins';
+/* https://min-max-calculator.9elements.com/ */
+/* Сервис создания favicon - https://www.favicon.by/ */
+/* Онлайн декодер WebP - https://squoosh.app/ */
+/* css responsive = плагин для калькулятора в css  */
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    font-size: var(--fz);/* 16px стандартный размер браузера */
+    font-weight: var(--font-weight);
+    background-color: var(--bg-color);
+	&.lock {
+		overflow: hidden;/* для меню бургер, класс добавляется JavaScript. Чтобы сайт не скроллился при открытом меню */
+	}
+}
+.wrapper {
+    min-height: 100%;
+    overflow: clip; 
+    display: flex;
+    flex-direction: column;
+}
+/* .container {
+    max-width: 1310px;
+    margin: 0 auto;
+    padding: 0px 15px;
+    box-sizing: border-box;
+} */
+[class*="__container"] {/* селектор атрибута */
+    max-width: 1310px;
+    margin: 0 auto;
+    padding: 0px 15px;
+    box-sizing: border-box;
+}
+.ibg {         
+    position: relative;
+    /* padding: 0px 0px 58% 0px; *//* отзывчивая высота нижним процентным паддингом родителю. задаем вместо фиксированной высоты.  */
+    //overflow: hidden;    
+}
+.ibg img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    //object-position: center;
+}
+/* одновременно указать в секции */
+/* .main-block {
+    position: relative;
+    &__image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+} */
+
+.header-main {
+    &_flex {
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+    }
+
+    &__content {
+    }
+
+    &__buttons {
+        flex: 0 0 auto;
+        align-self: flex-end;
+    }
+
+    &__button {
+    }
+
+    &__label {
+        font-weight: 300;
+        font-size: 11px;
+        line-height: 1.6;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #9C9C9C;
+        border: 1px solid rgba(129, 129, 139, 0.2);
+        border-radius: 12px;
+        display: inline-block;
+        text-align: center;
+        min-height: 37px;
+        padding: 11px 18px;
+        transition: all 0.3s ease 0s;
+        &:not(:last-child) {
+            margin: 0px 0px 20px 0px;
+        }
+        &:hover {
+            @media (any-hover: hover) {
+                text-decoration: underline;
+            }
+        }
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 52px;
+        line-height: 1.2; 
+        color: #FFFFFF;
+    }
+    &__title:not(:last-child) {
+        margin: 0px 0px 30px 0px;
+    }
+    &__text {
+        line-height: 1.5;
+        font-size: 18px;
+        color: #9C9C9C;
+    }
+    &__text:not(:last-child) {
+        margin: 0px 0px 30px 0px;
+    }
+}
+@media (max-width: 991.98px) {
+    .header-main {
+        &__title {
+            font-size: 44px;
+        }
+    }
+}
+@media (max-width: 767.98px) {
+    .header-main {
+        &_flex {
+            flex-direction: column;
+            align-items: start;
+        }
+        &__buttons {
+            align-self: center;
+        }
+        &__title {
+            font-size: 32px;
+        }
+        &__title:not(:last-child) {
+            margin: 0px 0px 15px 0px;
+        }
+        &__text {
+        }
+    }
+}
+.text {
+    line-height: 1.5;
+    color: #81818B;
+}
+/* ---------------- */
+@media (max-width: 1200px) {}
+@media (max-width: 1200px) {}
+@media (max-width: 1200px) {}
+@media (min-width: var(--md2)) {}
+@media (max-width: var(--md2)) {}
+@media (any-hover: hover) {}
+/* @media (any-hover: hover) {медиазапрос для устройств, где есть мышь
+    &:hover {
+        transform: scale(1.10);
+    }
+} */
+/* для адаптации картинок и  видео задаем родителю нижний процентный паддинг вместо фиксированной высоты */
+/* для этого высоту делим на ширину */
+/* &__video {
+    padding: 0px 0px 56.25% 0px;
+} */
+/* width="560" height="315" изображение или видео адаптируется */
+/* 315/560=56.25 из iframe */
+
+/* &__body > *:not(:last-child) {обращение ко всем обьектам первого уровня, кроме последнего
+    margin: 0px 0px 30px 0px;
+} */
+
+/*     &__video {
+        flex: 0 0 57%; 600px/1046px 
+        position: relative;
+        padding: 0px 0px 42.25% 0px;  442/1046*100=42.25% 
+    }
+    &__video iframe {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    } */
+
+@import 'blocks/page';
+@import 'blocks/pageup';
+@import 'blocks/title';
+@import 'blocks/button';
+@import 'blocks/nav-menu';
+//@import 'blocks/nav-menuTop';
+//@import 'blocks/nav-menuRight';
+@import 'blocks/header';
+@import 'blocks/footer';
+@import 'blocks/main-block';
+@import 'blocks/clients';
+@import 'blocks/servises';
+@import 'blocks/marketing';
+@import 'blocks/achievement';
+@import 'blocks/testimonials';
+@import 'blocks/blog';
+@import 'blocks/scaling';
+/* 
+.ibg{
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+position: relative;
+}
+.ibg img{
+width: 0;
+height: 0;
+position: absolute;
+top: 0;
+left: 0;
+opacity: 0;
+visibility: hidden;
+}
+*/
+
+/* &__image {
+    display: block; чтобы появилась картинка 
+    position: relative;
+    padding-bottom: 49.238579%;  194высота картинки/394ширина картинки 
+}
+&__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+        &:hover {
+            transform: scale(1.10);
+            filter: grayscale(90%);
+        }
+    }
+} */
